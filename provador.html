@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Provador Cílios de Boneca</title>
+<style>
+body{margin:0;background:#000;display:flex;justify-content:center;font-family:sans-serif}
+.box{width:100%;max-width:430px;background:#0a0a0a;min-height:100vh;padding:16px}
+h1{color:#fff;text-align:center;font-size:12px;letter-spacing:3px}
+#cam{width:100%;height:520px;background:#111;border-radius:28px;overflow:hidden;position:relative;border:1px solid #333}
+video,canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+.btn{width:100%;height:56px;border-radius:999px;border:0;background:#e8a0a8;color:#2a1214;font-weight:800;margin-top:12px}
+.ops{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:18px}
+.ops button{padding:12px;border-radius:16px;border:1px solid #333;background:#111;color:#fff;font-size:11px}
+.ops button.on{background:#e8a0a833;border-color:#e8a0a8}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>CÍLIOS DE BONECA • PROVADOR</h1>
+<div id="cam">
+<div id="off" style="position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:30px">
+<div><p style="color:#fff">Veja o efeito em você</p><button class="btn" onclick="ligar()">ATIVAR CÂMERA</button></div>
+</div>
+<video id="v" autoplay playsinline muted></video>
+<canvas id="c"></canvas>
+</div>
+<div class="ops">
+<button id="b-boneca" class="on" onclick="setT('boneca')">BONECA</button>
+<button id="b-gatinho" onclick="setT('gatinho')">GATINHO</button>
+<button id="b-natural" onclick="setT('natural')">NATURAL</button>
+</div>
+<a id="zap" href="#" style="display:flex;height:56px;align-items:center;justify-content:center;border-radius:999px;background:linear-gradient(90deg,#e8a0a8,#d88c94);color:#2a1214;font-weight:800;text-decoration:none;margin-top:18px;font-size:13px;letter-spacing:2px">QUERO ESSE EFEITO</a>
+<p style="color:#555;text-align:center;font-size:9px;margin-top:10px">Sua imagem não é salva. Tudo no seu celular.</p>
+</div>
+<script>
+let tipo='boneca'
+function setT(t){tipo=t;document.querySelectorAll('.ops button').forEach(b=>b.classList.remove('on'));document.getElementById('b-'+t).classList.add('on');document.getElementById('zap').href='https://wa.me/5541999999999?text=Quero%20efeito%20'+t}
+async function ligar(){
+document.getElementById('off').style.display='none';
+const s=await navigator.mediaDevices.getUserMedia({video:{facingMode:"user"}})
+const v=document.getElementById('v');v.srcObject=s;await v.play()
+const c=document.getElementById('c'),ctx=c.getContext('2d');c.width=430;c.height=600
+;(function loop(){
+if(v.paused)return;ctx.clearRect(0,0,c.width,c.height);ctx.drawImage(v,0,0,c.width,c.height);ctx.fillStyle='black'
+if(tipo=='boneca')for(let i=-60;i<60;i+=7)ctx.fillRect(215+i,268,2,24)
+if(tipo=='gatinho')for(let i=-20;i<80;i+=7)ctx.fillRect(235+i,268,2,20)
+if(tipo=='natural')for(let i=-50;i<50;i+=9)ctx.fillRect(215+i,272,1.5,14)
+requestAnimationFrame(loop)})()
+}
+setT('boneca')
+</script>
+</body>
+</html>
