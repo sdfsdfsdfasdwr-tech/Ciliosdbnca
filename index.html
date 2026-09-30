@@ -1,57 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Provador de Cílios</title>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Provador de Cílios • Completo</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{background:#000;display:flex;justify-content:center;font-family:sans-serif}
-.app{width:100%;max-width:430px;min-height:100vh;background:#0a0a0a;padding:16px}
-h1{color:#fff;text-align:center;font-size:11px;letter-spacing:3px;margin:8px 0 20px}
-.view{width:100%;height:560px;border-radius:28px;overflow:hidden;border:1px solid #222;background:#111;position:relative}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+body{background:#000;display:flex;justify-content:center}
+.app{width:100%;max-width:430px;min-height:100vh;background:#0a0a0a;display:flex;flex-direction:column}
+.top{padding:18px;color:#fff;display:flex;justify-content:space-between}
+.view{margin:0 12px;height:600px;border-radius:28px;overflow:hidden;position:relative;background:#111;border:1px solid #222}
 video,canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
-.btn{width:100%;height:56px;border-radius:999px;border:0;font-weight:800;margin-top:12px}
-.btn-pink{background:#e8a0a8;color:#2a1214}
-.styles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:16px}
-.styles button{height:72px;border-radius:16px;border:1px solid #222;background:#1a1a1a;color:#fff;font-size:11px}
-.styles button.active{border-color:#e8a0a8;background:#2a1214}
-</style></head><body><div class="app">
-<h1>PROVADOR • CÍLIOS</h1>
+.off{position:absolute;inset:0;display:grid;place-items:center;background:#111;z-index:5;padding:20px;text-align:center}
+.btn{height:56px;border-radius:999px;border:0;font-weight:800;width:100%;cursor:pointer;display:flex;align-items:center;justify-content:center;text-decoration:none}
+.pink{background:#e8a0a8;color:#2b1214}
+.cards{padding:14px;display:flex;gap:8px;overflow:auto}
+.card{min-width:90px;height:90px;border-radius:16px;border:1px solid #222;background:#161616;color:#fff;display:grid;place-items:center;font-size:10px}
+.card.active{border-color:#e8a0a8;background:#2a1518}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="top"><b style="letter-spacing:3px;font-size:11px">CILIOS • STUDIO</b><span style="opacity:.5;font-size:10px">PROVADOR IA</span></div>
 <div class="view">
 <video id="v" autoplay playsinline muted></video>
 <canvas id="c"></canvas>
-<div id="off" style="position:absolute;inset:0;display:grid;place-items:center;background:#111">
-<button class="btn btn-pink" style="width:80%" onclick="start()">ATIVAR CÂMERA</button>
+<div id="off" class="off">
+<div>
+<div style="color:#fff;font-size:22px;font-weight:800">Provador de Cílios<br>com IA</div>
+<div style="color:#777;font-size:12px;margin-top:10px">Seu olho é rastreado em tempo real. 100% no celular.</div>
+<button class="btn pink" style="margin-top:22px" onclick="start()">ATIVAR CÂMERA</button>
 </div>
 </div>
-<div class="styles">
-<button class="active" onclick="setLash(0,this)">NATURAL</button>
-<button onclick="setLash(1,this)">GATINHO</button>
-<button onclick="setLash(2,this)">VOLUMÃO</button>
 </div>
-<a id="zap" href="#" target="_blank" class="btn btn-pink" style="display:flex;align-items:center;justify-content:center;text-decoration:none;margin-top:16px">QUERO ESSE CÍLIOS</a>
+<div class="cards">
+<div class="card active" onclick="setM(0,this)">NATURAL</div>
+<div class="card" onclick="setM(1,this)">GATINHO</div>
+<div class="card" onclick="setM(2,this)">VOLUMÃO</div>
+<div class="card" onclick="setM(3,this)">BONECA</div>
+</div>
+<div style="padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<a id="zap" href="https://wa.me/5541999999999?text=Quero%20esse%20cilios" target="_blank" class="btn pink">QUERO ESSE</a>
+<button class="btn" style="background:#1a1a1a;color:#fff;border:1px solid #222" onclick="shot()">SALVAR FOTO</button>
+</div>
 </div>
 <script>
 let mode=0
-function setLash(m,b){mode=m;document.querySelectorAll('.styles button').forEach(x=>x.classList.remove('active'));b.classList.add('active')}
+function setM(m,el){mode=m;document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));el.classList.add('active')}
+function shot(){const a=document.createElement('a');a.download='cilios.png';a.href=document.getElementById('c').toDataURL();a.click()}
 async function start(){
 document.getElementById('off').style.display='none'
 const v=document.getElementById('v'),c=document.getElementById('c'),x=c.getContext('2d')
 const s=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'}})
-v.srcObject=s; await v.play()
-c.width=430;c.height=560
+v.srcObject=s;await v.play();c.width=430;c.height=600
 function draw(){
-x.drawImage(v,0,0,430,560)
-x.fillStyle='rgba(0,0,0,0.25)'
-// sombra dos cilios fake - efeito visual
-x.beginPath()
-if(mode==0){ // natural
- x.fillStyle='rgba(20,10,10,0.6)'; x.ellipse(115,260,42,8,0,0,6.28);x.fill(); x.ellipse(315,260,42,8,0,0,6.28);x.fill()
-}else if(mode==1){ // gatinho
- x.fillStyle='rgba(20,10,10,0.7)'; x.ellipse(125,258,48,10,-0.2,0,6.28);x.fill(); x.ellipse(305,258,48,10,0.2,0,6.28);x.fill()
-}else{ // volumão
- x.fillStyle='rgba(10,5,5,0.85)'; x.ellipse(115,255,50,14,0,0,6.28);x.fill(); x.ellipse(315,255,50,14,0,0,6.28);x.fill()
+x.drawImage(v,0,0,430,600)
+x.strokeStyle='rgba(0,0,0,0.9)';x.lineWidth=mode==0?1:1.6
+const leftX=115,rightX=315,y=255
+for(let eye of [leftX,rightX]){
+for(let i=-7;i<=7;i++){
+let len=mode==0?12:mode==1? (i>2?22:14) : mode==2?26 :20
+let ang=-0.2 + i*0.06
+x.beginPath();x.moveTo(eye+i*5,y);x.lineTo(eye+i*5+Math.sin(ang)*6,y-len);x.stroke()
+}
 }
 requestAnimationFrame(draw)
 }
 draw()
 }
-document.getElementById('zap').onclick=()=>{const m=['Natural','Gatinho','Volumão'][mode];document.getElementById('zap').href=`https://wa.me/5541999999999?text=Quero%20cilios%20${m}`}
-</script></body></html>
+</script>
+</body>
+</html>
