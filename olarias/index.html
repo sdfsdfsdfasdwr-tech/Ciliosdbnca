@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cílios de Boneca | Lash Designer em Ponta Grossa/PR</title>
+<meta name="description" content="Extensão de cílios em Ponta Grossa/PR: Boneca Luxo, Efeito Molhado, Foxy, Sirena, Egípcia e mais. Escolha seu estilo, veja os valores e agende pelo WhatsApp.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Cílios de Boneca | Lash Designer">
+<meta property="og:description" content="Escolha seu estilo de cílios, veja os valores e agende pelo WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="preload" as="image" href="/imagens/capa.webp" fetchpriority="high">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f0cfc8'/%3E%3Cpath d='M6 19c5-6 15-6 20 0' fill='none' stroke='%230b0807' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<script>document.documentElement.className+=' js'</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BeautySalon", "name": "Cílios de Boneca", "description": "Lash designer em Ponta Grossa/PR: extensão de cílios.", "telephone": "+55 42 99959-2780", "address": {"@type": "PostalAddress", "streetAddress": "Rua Jacob Holzmann, 167 - Olarias", "addressLocality": "Ponta Grossa", "addressRegion": "PR", "addressCountry": "BR"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00"}]}</script>
+<style>
+:root{
+  --bg:#fff;--card:#faf5f3;--ink:#241a18;--muted:#6f625f;--rose:#a3483d;--soft:#f0cfc8;--line:rgba(36,26,24,.12);color-scheme:light;
+  --serif:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 .9375rem/1.5 var(--sans);overflow-x:hidden}
+h1,h2,h3,p,ul,figure,address{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.6875rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--rose)}
+h2{font:500 clamp(1.6rem,6vw,2.3rem)/1.1 var(--serif);margin-top:8px;letter-spacing:-.005em}
+.lead{margin-top:10px;max-width:46ch;color:var(--muted);font-size:.875rem}
+
+/* ---------- barra superior ---------- */
+.bar{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:calc(10px + env(safe-area-inset-top,0px)) 18px 10px;background:rgba(255,255,255,.82);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
+  transform:translateY(-110%);transition:transform .4s var(--ease)}
+.bar.show{transform:none}
+.bar .brand{font:400 1.0625rem/1 var(--serif);letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.bar nav{display:none;gap:26px;font-size:.8125rem;color:var(--muted)}
+.bar nav a{text-decoration:none;transition:color .2s}.bar nav a:hover{color:var(--ink)}
+@media(min-width:760px){.bar nav{display:flex}}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 18px;border-radius:99px;
+  background:var(--ink);color:#fff;font-size:.8125rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:transform .2s,background-color .2s}
+.pill:hover{background:var(--rose)}.pill:active{transform:scale(.97)}
+.pill.sm{min-height:34px;padding:0 14px;font-size:.75rem}
+
+/* ---------- abertura ---------- */
+.cover{position:relative;display:flex;flex-direction:column;height:100vh;height:100svh;min-height:560px;overflow:hidden;
+  padding:calc(14px + env(safe-area-inset-top,0px)) 0 0;
+  background:radial-gradient(70% 42% at 88% 6%,rgba(240,207,200,.75),transparent 70%),radial-gradient(60% 38% at 4% 62%,rgba(233,169,157,.28),transparent 70%),linear-gradient(#fff,#fdf2ee 70%,#fbe9e3)}
+.mark{display:flex;align-items:center;justify-content:center;gap:12px;font:400 .8125rem/1 var(--serif);letter-spacing:.34em;text-transform:uppercase;color:var(--ink);padding:6px 24px}
+.mark::before,.mark::after{content:"";width:28px;height:1px;background:var(--rose);opacity:.6}
+.cv-main{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;padding:6px 24px 10px}
+.stage{position:relative;flex:1 1 0;min-height:140px;width:100%}
+.arch-wrap{position:absolute;top:6px;bottom:16px;left:calc(50% - 7px);transform:translateX(-50%);aspect-ratio:3/4;max-width:calc(100% - 48px)}
+.arch-wrap::before{content:"";position:absolute;inset:0;border:1.5px solid rgba(163,72,61,.45);border-radius:999px 999px 26px 26px;translate:13px 11px}
+.arch{position:relative;width:100%;height:100%;margin:0;overflow:hidden;border-radius:999px 999px 26px 26px;background:var(--card);box-shadow:0 22px 50px rgba(163,72,61,.22)}
+.cover-img{width:100%;height:100%;object-fit:cover;object-position:50% 36%;transform:translate3d(0,var(--py,0px),0) scale(1.1);will-change:transform}
+.fl{position:absolute;z-index:3;display:grid;gap:1px;padding:8px 14px;border-radius:16px;background:rgba(255,255,255,.92);
+  border:1px solid rgba(255,255,255,.9);box-shadow:0 10px 28px rgba(36,26,24,.14);line-height:1.15}
+.fl b{font:600 1.0625rem/1 var(--serif);color:var(--ink)}
+.fl b i{color:#f5b301;font-style:normal;font-size:.9em}
+.fl small{color:var(--muted);font-size:.625rem;letter-spacing:.02em}
+.fl-a{left:2%;top:15%}
+.fl-b{right:0;bottom:12%}
+.seal{position:absolute;z-index:3;right:3%;top:2%;width:78px;height:78px;border-radius:50%;background:#fff;box-shadow:0 8px 24px rgba(36,26,24,.14)}
+.seal svg{position:absolute;inset:0;width:100%;height:100%}
+.seal text{font:600 8.4px var(--sans);letter-spacing:.2em;fill:var(--rose);text-transform:uppercase}
+.seal .eye{fill:none;stroke:var(--rose);stroke-width:1.6;stroke-linecap:round}
+.cv-copy{flex:none;display:grid;justify-items:center;gap:6px;padding-top:14px;text-align:center}
+.cv-copy .eyebrow{letter-spacing:.3em}
+.cv-copy h1{font:500 clamp(2rem,9.4vw,2.6rem)/1 var(--serif);letter-spacing:-.01em}
+.cv-copy h1 em{font-style:italic;color:var(--rose)}
+.cv-copy .sub{max-width:30ch;color:var(--muted);font-size:.8125rem}
+.cta-row{display:flex;gap:10px;margin-top:10px}
+.btn2{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 20px;border-radius:99px;font-size:.8125rem;font-weight:700;text-decoration:none;white-space:nowrap;
+  transition:transform .2s,background-color .2s,border-color .2s}
+.btn2.solid{background:var(--ink);color:#fff}.btn2.solid:hover{background:var(--rose)}
+.btn2.line{border:1.5px solid rgba(36,26,24,.28);color:var(--ink)}.btn2.line:hover{border-color:var(--rose);color:var(--rose)}
+.btn2:active{transform:scale(.97)}
+.btn2 span{transition:transform .25s}.btn2.solid:hover span{transform:translateX(3px)}
+.ticker{flex:none;overflow:hidden;background:var(--ink);color:#f7e9e5;padding:11px 0;margin-top:6px;font-size:.6875rem;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.ticker div{display:inline-block}
+.ticker span{display:inline-block;padding:0 14px}
+.ticker span::after{content:"✦";margin-left:28px;color:var(--soft);opacity:.7}
+@media(max-height:700px){.cv-copy .sub{display:none}}
+@media(min-width:900px){
+  .cover{padding-top:calc(22px + env(safe-area-inset-top,0px))}
+  .cv-main{flex-direction:row-reverse;max-width:1080px;width:100%;margin:0 auto;gap:48px;padding:10px 32px}
+  .stage{flex:1 1 50%;height:100%;min-height:0}
+  .cv-copy{flex:1 1 50%;justify-items:start;text-align:left;padding:0}
+  .cv-copy h1{font-size:clamp(3rem,5vw,4.4rem)}
+  .cv-copy .sub{font-size:1rem;max-width:34ch}
+  .fl-a{left:6%}.fl-b{right:6%}
+}
+@media(prefers-reduced-motion:no-preference){
+  @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes arch{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+  @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.92)}to{opacity:1;transform:none}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes bob{50%{transform:translateY(-6px)}}
+  @keyframes run{to{transform:translateX(-50%)}}
+  .mark{animation:up .8s var(--ease) both}
+  .arch{animation:arch 1.2s var(--ease) .1s both}
+  .arch-wrap::before{animation:up 1s var(--ease) .5s both}
+  .fl-a{animation:pop .7s var(--ease) .9s both,bob 5s ease-in-out 1.8s infinite}
+  .fl-b{animation:pop .7s var(--ease) 1.05s both,bob 6s ease-in-out 2.2s infinite}
+  .seal{animation:pop .7s var(--ease) .8s both}
+  .seal svg{animation:spin 22s linear infinite}
+  .cv-copy>*{animation:up .8s var(--ease) both}
+  .cv-copy>:nth-child(1){animation-delay:.45s}.cv-copy>:nth-child(2){animation-delay:.55s}.cv-copy>:nth-child(3){animation-delay:.65s}.cv-copy>:nth-child(4){animation-delay:.75s}
+  .ticker{animation:up .8s var(--ease) .9s both}
+  .ticker div{animation:run 32s linear infinite}
+}
+
+/* ---------- estilos ---------- */
+.styles{padding:56px 20px 20px;scroll-margin-top:56px}
+.head{text-align:center}
+.head h2{margin-top:0}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;width:min(100%,380px);margin:22px auto 0;padding:5px;border-radius:99px;
+  background:linear-gradient(#f8f0ed,#f1e5e0);border:1px solid rgba(163,72,61,.12);box-shadow:inset 0 2px 4px rgba(36,26,24,.06)}
+.seg i{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:99px;background:#fff;
+  box-shadow:0 8px 18px -8px rgba(163,72,61,.5),0 1px 2px rgba(36,26,24,.1);transition:transform .5s cubic-bezier(.34,1.25,.64,1)}
+.seg[data-mode=brow] i{transform:translateX(100%)}
+.seg button{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 10px;border:0;border-radius:99px;background:none;
+  color:var(--muted);font:700 .9375rem var(--sans);letter-spacing:.005em;cursor:pointer;transition:color .3s,transform .2s}
+.seg button:active{transform:scale(.97)}
+.seg button svg{flex:none;width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s,transform .4s var(--ease)}
+.seg button[aria-pressed=true]{color:var(--ink)}
+.seg button[aria-pressed=true] svg{stroke:var(--rose);transform:scale(1.08)}
+.rail{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;max-width:640px;margin:24px auto 0}
+.card{display:flex;gap:14px;padding:8px;border-radius:26px;background:#fff;border:1px solid rgba(36,26,24,.07);
+  box-shadow:0 1px 2px rgba(36,26,24,.04),0 18px 34px -18px rgba(163,72,61,.28);
+  transition:transform .4s var(--ease),border-color .3s,box-shadow .4s var(--ease);cursor:pointer}
+.card:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(36,26,24,.04),0 26px 40px -18px rgba(163,72,61,.34)}
+.art{position:relative;flex:0 0 clamp(96px,28vw,132px);display:grid;place-items:center;border-radius:19px;overflow:hidden}
+.art::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 24% 12%,rgba(255,255,255,.5),transparent 58%)}
+.art svg{position:relative;z-index:1;width:100%;height:auto;display:block}
+.photo-art{display:block;padding:0;border:0;font:inherit;cursor:zoom-in;-webkit-tap-highlight-color:transparent}
+.photo-art::after{display:none}
+.photo-art::before{content:"";position:absolute;inset:auto 0 0 0;height:50%;z-index:1;background:linear-gradient(transparent,rgba(11,8,7,.62))}
+.photo-art img{width:100%;height:100%;object-fit:cover;object-position:30% 42%;transition:transform .8s var(--ease)}
+.photo-art:hover img{transform:scale(1.04)}
+.zoom{position:absolute;left:6px;right:6px;bottom:8px;z-index:2;margin:0 auto;width:max-content;max-width:calc(100% - 12px);padding:5px 10px;border-radius:12px;
+  background:rgba(11,8,7,.58);border:1px solid rgba(255,255,255,.22);
+  color:#fff;font:600 .6875rem/1.2 var(--sans);text-align:center}
+.info{display:flex;flex-direction:column;flex:1;min-width:0;padding:8px 8px 6px 0}
+.info h3{font:500 1.375rem/1.1 var(--serif);letter-spacing:-.005em}
+.meta{margin-top:5px;color:var(--muted);font-size:.625rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.meta b{color:var(--rose);font-weight:700}
+.maint{display:flex;flex-wrap:wrap;gap:0 .45em;margin-top:8px;color:#9a8f8c;font-size:.6875rem}
+.maint b{font-weight:500;white-space:nowrap}
+.bottom{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 8px;margin-top:auto;padding-top:14px}
+.price{display:grid;gap:2px}
+.lbl{color:var(--muted);font-size:.5938rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.val{display:flex;align-items:baseline;gap:2px;font:500 1.5rem/1 var(--serif);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+.val small{font:600 .6875rem var(--sans);color:var(--muted);letter-spacing:.02em}
+.val small:first-child{margin-right:3px}
+.pick{display:inline-flex;align-items:center;gap:6px;flex:none;min-height:38px;padding:0 13px 0 5px;border:0;border-radius:99px;background:var(--ink);color:#fff;
+  font:600 .75rem var(--sans);letter-spacing:.01em;cursor:pointer;transition:background-color .3s,transform .2s,box-shadow .3s;box-shadow:0 8px 16px -8px rgba(36,26,24,.55)}
+.pick i{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.16);font-style:normal;font-size:1rem;line-height:1;transition:background-color .3s,transform .4s var(--ease)}
+.pick i::before{content:"+"}
+.pick:hover{background:var(--rose)}.pick:hover i{transform:rotate(90deg)}
+.pick:active{transform:scale(.97)}
+.panel .lead{margin:20px auto 0;text-align:center}
+@media(prefers-reduced-motion:no-preference){
+}
+
+/* ---------- troca cílios ⇄ sobrancelhas ---------- */
+.panels{position:relative}
+.panel[hidden]{display:none}
+@media(prefers-reduced-motion:no-preference){
+  .panels{transition:height .45s var(--ease)}
+  .panel{transition:opacity .33s ease,transform .33s ease}
+  .panel.fade{opacity:0;transform:translateY(10px);pointer-events:none}
+}
+.card.sel{border-color:var(--rose);box-shadow:0 0 0 1px var(--rose),0 24px 40px -18px rgba(163,72,61,.4)}
+.card.sel .pick{background:var(--rose)}
+.card.sel .pick i::before{content:"✓"}
+.card.sel .pick:hover i{transform:none}
+.cart{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;width:min(420px,calc(100% - 28px));padding:10px 10px 10px 14px;
+  border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 40px rgba(36,26,24,.18);
+  transform:translate(-50%,160%);visibility:hidden;transition:transform .45s var(--ease),visibility 0s .45s}
+.cart.show{transform:translate(-50%,0);visibility:visible;transition:transform .45s var(--ease),visibility 0s}
+.cart button{background:none;color:var(--muted);font-family:inherit;cursor:pointer}
+.cart-row{display:flex;align-items:center;gap:10px}
+.cart .ck{flex:none;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--rose);color:#fff;font-size:.75rem;font-weight:700}
+.cart-txt{flex:1;min-width:0;line-height:1.2}
+.cart-txt b{display:block;font-size:.8125rem;font-weight:600}
+.cart-txt small{display:block;max-width:100%;overflow:hidden;color:var(--muted);font-size:.6875rem;white-space:nowrap;text-overflow:ellipsis}
+.cart .more{flex:none;min-height:36px;padding:0 14px;border:1px solid rgba(36,26,24,.25);border-radius:99px;background:none;color:var(--ink);font-size:.75rem;font-weight:600;transition:border-color .2s}
+.cart .more:hover{border-color:var(--rose)}
+.cart-go{width:100%;min-height:42px}
+@media(prefers-reduced-motion:reduce){.cart{transition:none}}
+
+/* Janela de resumo que aparece ao escolher o segundo serviço */
+body.sheet-open{overflow:hidden}
+.order-sheet{position:fixed;inset:0;z-index:120;display:flex;align-items:flex-end;justify-content:center;background:rgba(18,14,13,0);visibility:hidden;opacity:0;transition:opacity .25s ease,background .25s ease,visibility 0s .25s}
+.order-sheet.open{visibility:visible;opacity:1;background:rgba(18,14,13,.48);transition:opacity .25s ease,background .25s ease,visibility 0s}
+.order-sheet-card{width:min(100%,560px);max-height:min(92svh,850px);overflow:auto;overscroll-behavior:contain;touch-action:pan-y;transform-origin:top left;padding:12px 20px calc(20px + env(safe-area-inset-bottom,0px));border-radius:28px 28px 0 0;background:#fff;box-shadow:0 -16px 55px rgba(0,0,0,.18);transform:translateY(30px);transition:transform .35s var(--ease)}
+.order-sheet.open .order-sheet-card{transform:none}
+.order-sheet-card.dragging{transition:none}
+.order-handle{width:54px;height:5px;border-radius:99px;background:#e6e0d8;margin:0 auto 20px}
+.order-head{user-select:none;display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.order-head h2{margin:0;font:700 1.55rem/1.1 var(--sans);letter-spacing:-.04em}
+.order-close{touch-action:manipulation;width:38px;height:38px;border:0;border-radius:50%;background:var(--card);color:var(--ink);font-size:1.45rem;cursor:pointer}
+.order-box{margin-top:16px;padding:18px;border:1px solid var(--soft);border-radius:22px;background:var(--bg)}
+.order-box h3{margin:0 0 12px;font-size:1.05rem;font-weight:700}
+.order-label{display:block;margin:0 0 8px;color:var(--ink);font-size:.9rem;font-weight:600}
+.order-note{width:100%;min-height:88px;resize:vertical;padding:13px 14px;border:1px solid var(--line);border-radius:16px;background:var(--bg);font:inherit;color:var(--ink)}
+.order-note::placeholder{color:var(--muted)}
+.order-items{display:grid;gap:12px}.order-item{display:grid;grid-template-columns:64px minmax(0,1fr) 38px;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);border-radius:16px;background:var(--bg);font-size:.9rem}.order-item img{display:block;width:64px;height:64px;border-radius:12px;object-fit:cover;background:var(--card)}.order-item-copy{min-width:0}.order-item-copy strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.94rem}.order-item-copy p{margin:5px 0 0;color:var(--muted);font-size:.83rem;font-variant-numeric:tabular-nums}.order-item-delete{display:grid;place-items:center;width:36px;height:36px;padding:0;border:0;border-radius:50%;background:var(--card);color:var(--muted);cursor:pointer;transition:background .2s,color .2s}.order-item-delete:hover{background:var(--soft);color:var(--rose)}.removal-question{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:16px;padding:14px;border:1px solid var(--soft);border-radius:16px;background:var(--card)}.removal-question strong{display:block;font-size:.9rem}.removal-hint{margin:5px 0 0;color:var(--muted);font-size:.78rem;line-height:1.45}.removal-toggle{position:relative;flex:none;width:54px;height:30px;padding:0;border:0;border-radius:99px;background:var(--line);cursor:pointer;transition:background .22s ease;touch-action:manipulation}.removal-toggle::before{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0002;transition:transform .22s cubic-bezier(.2,.8,.2,1)}.removal-toggle[aria-pressed="true"]{background:var(--rose)}.removal-toggle[aria-pressed="true"]::before{transform:translateX(24px)}.removal-toggle:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.day-question{margin-top:18px}.day-question>strong{display:block;font-size:.9rem}.day-picker{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin-top:10px}.period-picker{grid-template-columns:repeat(3,minmax(0,1fr))}.day-choice,.period-choice{min-width:0;min-height:38px;padding:0 8px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--rose);font:600 .76rem var(--sans);cursor:pointer;transition:background .18s,border-color .18s,color .18s}.day-choice[aria-pressed="true"],.period-choice[aria-pressed="true"]{border-color:var(--rose);background:var(--rose);color:#fff}.day-choice:focus-visible,.period-choice:focus-visible{outline:3px solid var(--rose);outline-offset:2px}
+.order-time,.order-subtotal{display:flex;justify-content:space-between;gap:12px;margin-top:14px;color:var(--muted);font-size:.9rem}.order-time strong{color:var(--ink);font-variant-numeric:tabular-nums}
+.order-total{display:flex;justify-content:space-between;margin-top:8px;font-size:1.18rem;font-weight:800}
+.order-cta{width:100%;min-height:50px;margin-top:16px;border:0;background:var(--rose);color:#fff;cursor:pointer}.order-cta:hover{background:var(--ink)}
+
+@media(min-width:600px){.order-sheet{align-items:center;padding:20px}.order-sheet-card{border-radius:28px;max-height:90vh}}
+@media(prefers-reduced-motion:reduce){.order-sheet,.order-sheet-card{transition:none}}
+
+/* Orientações para o agendamento */
+.booking-guidelines{padding-top:50px;padding-bottom:26px}
+.guide-ornament{display:flex;align-items:center;justify-content:center;gap:16px;margin:0 auto 30px;color:var(--rose)}
+.guide-ornament::before,.guide-ornament::after{content:"";width:min(25vw,140px);height:1px;background:var(--soft)}
+.guide-ornament svg{width:40px;height:40px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.guide-head{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:22px;text-align:center}
+.guide-head::before{content:"";flex:none;width:5px;height:34px;border-radius:9px;background:var(--soft)}
+.guide-head h2{margin:0;font:700 clamp(1.6rem,6vw,2rem)/1.1 var(--sans);letter-spacing:-.04em}
+.guide-panel{display:grid;gap:12px;padding:16px;border:1px solid var(--line);border-radius:28px;background:var(--bg);box-shadow:0 8px 26px rgba(36,26,24,.05)}
+.guide-card{display:grid;grid-template-columns:52px minmax(0,1fr);align-items:center;gap:16px;min-height:86px;padding:16px;border:1px solid var(--line);border-radius:20px;background:var(--card)}
+.guide-icon{display:grid;place-items:center;width:52px;height:52px;border:1.5px solid var(--ink);border-radius:50%;color:var(--rose)}
+.guide-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.guide-card p{font-size:.96rem;line-height:1.5;font-weight:600}
+.guide-card b{color:var(--rose);font-weight:750}
+.guide-close{padding:10px 4px 2px;text-align:center;color:var(--rose);font:600 1.25rem var(--serif)}
+@media(max-width:380px){.guide-panel{padding:11px}.guide-card{grid-template-columns:46px minmax(0,1fr);gap:12px;padding:14px}.guide-icon{width:46px;height:46px}.guide-card p{font-size:.9rem}}
+
+.zoomov{position:fixed;inset:0;z-index:100;background:rgba(11,8,7,0);cursor:zoom-out;-webkit-tap-highlight-color:transparent;
+  transition:background-color .5s var(--ease),-webkit-backdrop-filter .5s,backdrop-filter .5s}
+.zoomov.open{background:rgba(11,8,7,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.zoomimg{position:absolute;display:block;object-fit:cover;border-radius:19px;box-shadow:0 0 0 rgba(0,0,0,0);
+  transition:left .55s var(--ease),top .55s var(--ease),width .55s var(--ease),height .55s var(--ease),border-radius .55s var(--ease),box-shadow .55s var(--ease)}
+.zoomov.open .zoomimg{border-radius:22px;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+@media(prefers-reduced-motion:reduce){.zoomov,.zoomimg{transition:none}}
+
+/* ---------- revelar ao rolar ---------- */
+@media(prefers-reduced-motion:no-preference){
+  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .js .reveal.in{opacity:1;transform:none}
+}
+
+/* Fotos preenchem toda a área lateral dos cards. */
+.photo-art{align-self:stretch;min-height:160px;background:var(--card)}
+.photo-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.photo-art img[hidden]{display:none}
+.gallery-controls{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:20px;color:#fff;font-size:14px;cursor:default}
+.gallery-controls button,.zoom-close{border:1px solid #ffffff66;background:#241a18cc;color:white;border-radius:99px;min-width:44px;min-height:44px;cursor:pointer;font:inherit}
+.zoom-close{position:absolute;top:20px;right:20px;font-size:24px}
+</style>
+</head>
+<body>
+
+<header class="bar" aria-label="Navegação">
+  <a class="brand" href="#top">Cílios de Boneca</a>
+  <nav aria-label="Seções"><a href="#estilos">Estilos</a><a href="#antes-de-agendar">Antes de agendar</a></nav>
+  <a class="pill sm" href="https://api.whatsapp.com/send?phone=5542999592780&text=Oiii%21%20%F0%9F%92%96%20Quero%20agendar%20um%20hor%C3%A1rio%20%E2%9C%A8" target="_blank" rel="noopener noreferrer">Agendar</a>
+</header>
+
+<main id="top">
+<section class="cover" aria-label="Apresentação">
+  <p class="mark">Lash Designer</p>
+  <div class="cv-main">
+    <div class="stage">
+      <div class="arch-wrap">
+        <figure class="arch">
+          <img class="cover-img" src="/imagens/capa.webp" width="720" height="1280" fetchpriority="high" decoding="async"
+               alt="Cliente com extensão de cílios e sobrancelhas design, deitada em tecido de cetim">
+        </figure>
+      </div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><defs><path id="ring" d="M50 50m-37 0a37 37 0 1 1 74 0a37 37 0 1 1-74 0"/></defs>
+          <text><textPath href="#ring">Cílios de Boneca • Ponta Grossa • </textPath></text></svg>
+        <svg viewBox="0 0 100 100" style="animation:none"><path class="eye" d="M32 56c10-12 26-12 36 0"/><path class="eye" d="M36 50l-3-6M44 46l-1-7M52 45v-8M60 46l1-7M67 50l3-6"/></svg>
+      </div>
+      <p class="fl fl-a"><b><i aria-hidden="true">★</i> 5.0</b><small>avaliação das clientes</small></p>
+      <p class="fl fl-b"><b>+1600</b><small>clientes em Ponta Grossa</small></p>
+    </div>
+    <div class="cv-copy">
+      <p class="eyebrow">Ponta Grossa · PR</p>
+      <h1>Cílios de <em>Boneca</em></h1>
+      <p class="sub">Extensão de cílios e design de sobrancelhas, com olhar cuidadoso em cada detalhe.</p>
+      <div class="cta-row">
+        <a class="btn2 solid" href="#estilos">Escolher meu estilo <span aria-hidden="true">→</span></a>
+        <a class="btn2 line" href="https://api.whatsapp.com/send?phone=5542999592780&text=Oiii%21%20%F0%9F%92%96%20Quero%20agendar%20um%20hor%C3%A1rio%20%E2%9C%A8" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true"><div><span>Boneca Luxo</span><span>Efeito Molhado</span><span>Boneca Natural</span><span>Boneca Foxy</span><span>Boneca Natural Marrom</span><span>Boneca Sirena</span><span>Efeito Rímel</span><span>Boneca Egípcia</span><span>Design simples</span><span>Design com Henna</span><span>Brow Lamination</span><span>Boneca Luxo</span><span>Efeito Molhado</span><span>Boneca Natural</span><span>Boneca Foxy</span><span>Boneca Natural Marrom</span><span>Boneca Sirena</span><span>Efeito Rímel</span><span>Boneca Egípcia</span><span>Design simples</span><span>Design com Henna</span><span>Brow Lamination</span></div></div>
+</section>
+
+<section class="styles wrap" id="estilos" aria-labelledby="t-estilos">
+  <div class="head reveal">
+    <h2 id="t-estilos">Escolha o seu serviço</h2>
+    <div class="seg cat" id="cat" role="group" aria-label="Categoria" data-mode="lash">
+      <i aria-hidden="true"></i>
+      <button type="button" data-cat="lash" aria-pressed="true" aria-controls="p-lash"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.500 15.500c4.500-5.500 12.500-5.500 17 0"/><path d="M6 12l-1.500-3M9.500 10.500L8.700 7M14.500 10.500l.8-3.500M18 12l1.500-3"/></svg><span>Cílios</span></button>
+      <button type="button" data-cat="brow" aria-pressed="false" aria-controls="p-brow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16.500c4-6.500 11.500-9.500 18-6"/><path d="M4.500 12.500c3-3 8-4.800 13.500-3.500"/></svg><span>Sobrancelhas</span></button>
+    </div>
+  </div>
+  <div class="panels">
+    <div class="panel" id="p-lash">
+      <div class="rail" role="list">
+<article class="card" role="listitem" data-kind="lash" data-name="Boneca Natural" data-price="130" data-minutes="90"><button class="art photo-art" type="button" aria-label="Ampliar foto da Boneca Natural"><img src="/imagens/boneca-natural.webp" width="750" height="1000" loading="lazy" decoding="async" alt="Olhos com extensão de cílios Boneca Natural e sobrancelhas desenhadas"><span class="zoom">Ampliar</span></button><div class="info"><h3>Boneca Natural</h3><p class="meta">1h30min · <b>disponível</b></p><p class="maint"><span>Manutenção</span><b>R$ 85,00</b></p><div class="bottom"><p class="price"><span class="lbl">Aplicação</span><strong class="val"><small>R$</small>130<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+<article class="card" role="listitem" data-kind="lash" data-name="Boneca Natural Marrom" data-price="130" data-minutes="90"><button class="art photo-art" type="button" aria-label="Ampliar foto de Boneca Natural Marrom"><img src="/imagens/boneca-natural-marrom.webp" width="968" height="1000" loading="lazy" decoding="async" alt="Boneca Natural Marrom — foto 1"><span class="zoom">Ampliar</span></button><div class="info"><h3>Boneca Natural Marrom</h3><p class="meta">1h30min · <b>disponível</b></p><p class="maint"><span>Manutenção</span><b>R$ 85,00</b></p><div class="bottom"><p class="price"><span class="lbl">Aplicação</span><strong class="val"><small>R$</small>130<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+<article class="card" role="listitem" data-kind="lash" data-name="Boneca Egípcia" data-price="140" data-minutes="90"><button class="art photo-art" type="button" aria-label="Ampliar foto de Boneca Egípcia"><img src="/imagens/boneca-egipcia.webp" width="663" height="1000" loading="lazy" decoding="async" alt="Boneca Egípcia — foto 1"><span class="zoom">Ampliar</span></button><div class="info"><h3>Boneca Egípcia</h3><p class="meta">1h30min · <b>disponível</b></p><p class="maint"><span>Manutenção</span><b>R$ 90,00</b></p><div class="bottom"><p class="price"><span class="lbl">Aplicação</span><strong class="val"><small>R$</small>140<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+<article class="card" role="listitem" data-kind="lash" data-name="Fox Eyes" data-price="140" data-minutes="90"><button class="art photo-art" type="button" aria-label="Ampliar foto Fox Eyes"><img src="/imagens/fox-eyes.webp" width="732" height="1000" loading="lazy" decoding="async" alt="Extensão de cílios Fox Eyes" style="object-position:center"><span class="zoom">Ampliar</span></button><div class="info"><h3>Fox Eyes</h3><p class="meta">1h30min · <b>disponível</b></p><p class="maint"><span>Manutenção</span><b>R$ 90,00</b></p><div class="bottom"><p class="price"><span class="lbl">Aplicação</span><strong class="val"><small>R$</small>140<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+<article class="card" role="listitem" data-kind="lash" data-name="Boneca Sirena" data-price="110" data-minutes="90"><button class="art photo-art" type="button" aria-label="Ampliar foto de Boneca Sirena"><img src="/imagens/boneca-sirena.webp" width="562" height="1000" loading="lazy" decoding="async" alt="Boneca Sirena — foto 1"><span class="zoom">Ampliar</span></button><div class="info"><h3>Boneca Sirena</h3><p class="meta">1h30min · <b>disponível</b></p><div class="bottom"><p class="price"><span class="lbl">Aplicação</span><strong class="val"><small>R$</small>110<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+<article class="card" role="listitem" data-kind="lash" data-name="Boneca Luxo" data-price="150" data-minutes="90"><button class="art photo-art" type="button" aria-label="Ampliar foto de Boneca Luxo"><img src="/imagens/boneca-luxo.webp" width="570" height="1000" loading="lazy" decoding="async" alt="Boneca Luxo — foto 1"><span class="zoom">Ampliar</span></button><div class="info"><h3>Boneca Luxo</h3><p class="meta">1h30min · <b>disponível</b></p><p class="maint"><span>Manutenção</span><b>R$ 95,00</b></p><div class="bottom"><p class="price"><span class="lbl">Aplicação</span><strong class="val"><small>R$</small>150<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+<article class="card" role="listitem" data-kind="lash" data-name="Efeito Molhado" data-price="150" data-minutes="90"><button class="art photo-art" type="button" aria-label="Ampliar foto de Efeito Molhado"><img src="/imagens/efeito-molhado.webp" width="612" height="1000" loading="lazy" decoding="async" alt="Efeito Molhado — foto 1"><span class="zoom">Ampliar</span></button><div class="info"><h3>Efeito Molhado</h3><p class="meta">1h30min · <b>disponível</b></p><p class="maint"><span>Manutenção</span><b>R$ 95,00</b></p><div class="bottom"><p class="price"><span class="lbl">Aplicação</span><strong class="val"><small>R$</small>150<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+<article class="card" role="listitem" data-kind="lash" data-name="Efeito Rímel" data-price="140" data-minutes="90"><button class="art photo-art" type="button" aria-label="Ampliar foto de Efeito Rímel"><img src="/imagens/efeito-rimel-1.webp" width="827" height="1000" loading="lazy" decoding="async" alt="Efeito Rímel — foto 1"><img src="/imagens/efeito-rimel-2.webp" width="562" height="1000" loading="lazy" decoding="async" alt="Efeito Rímel — foto 2" hidden><span class="zoom">Ver 2 fotos</span></button><div class="info"><h3>Efeito Rímel</h3><p class="meta">1h30min · <b>disponível</b></p><p class="maint"><span>Manutenção</span><b>R$ 90,00</b></p><div class="bottom"><p class="price"><span class="lbl">Aplicação</span><strong class="val"><small>R$</small>140<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+      </div>
+    </div>
+    <div class="panel" id="p-brow" hidden>
+      <p class="lead" id="brow-lead">Escolha o serviço e adicione ao seu agendamento.</p>
+      <div class="rail" role="list">
+<article class="card" role="listitem" data-kind="brow" data-name="Design simples" data-price="35" data-minutes="35"><button class="art photo-art" type="button" aria-label="Ampliar foto de Design simples"><img src="/imagens/design-simples.webp" width="562" height="1000" loading="lazy" decoding="async" alt="Design simples"><span class="zoom">Ampliar</span></button><div class="info"><h3>Design simples</h3><p class="meta">Design de sobrancelhas · 35 min</p><div class="bottom"><p class="price"><span class="lbl">Valor</span><strong class="val"><small>R$</small>35<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+<article class="card" role="listitem" data-kind="brow" data-name="Design com Henna" data-price="45" data-minutes="40"><button class="art photo-art" type="button" aria-label="Ampliar foto de Design com Henna"><img src="/imagens/design-henna.webp" width="919" height="1000" loading="lazy" decoding="async" alt="Design com Henna"><span class="zoom">Ampliar</span></button><div class="info"><h3>Design com Henna</h3><p class="meta">Design de sobrancelhas · 40 min</p><div class="bottom"><p class="price"><span class="lbl">Valor</span><strong class="val"><small>R$</small>45<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+<article class="card" role="listitem" data-kind="brow" data-name="Brow Lamination" data-price="120" data-minutes="60"><button class="art photo-art" type="button" aria-label="Ampliar foto de Brow Lamination"><img src="/imagens/brow-lamination.webp" width="1000" height="818" loading="lazy" decoding="async" alt="Brow Lamination com fios alinhados para cima"><span class="zoom">Ampliar</span></button><div class="info"><h3>Brow Lamination</h3><p class="meta">Sobrancelhas · 60 min</p><div class="bottom"><p class="price"><span class="lbl">Valor</span><strong class="val"><small>R$</small>120<small>,00</small></strong></p><button class="pick" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Adicionar</span></button></div></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking-guidelines wrap reveal" id="antes-de-agendar" aria-labelledby="t-guidelines">
+  <div class="guide-ornament" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 39c-8-3-13-9-13-17 6 1 11 4 13 10 2-6 7-9 13-10 0 8-5 14-13 17Z"/><path d="M24 32c-3-9-1-17 0-22 4 6 6 14 0 22ZM17 35c-6-1-10-5-12-10 6 0 11 2 15 6M31 35c6-1 10-5 12-10-6 0-11 2-15 6M15 40h18"/></svg></div>
+  <header class="guide-head"><h2 id="t-guidelines">Antes de agendar</h2></header>
+  <div class="guide-panel">
+    <article class="guide-card"><span class="guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><p>Será tolerado até <b>10 minutos de atraso</b>. Após esse período, não será possível realizar o atendimento.</p></article>
+    <article class="guide-card"><span class="guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M17 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v1"/></svg></span><p>Pedimos a gentileza de <b>não trazer acompanhante</b>.</p></article>
+    <article class="guide-card"><span class="guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.5"/><path d="m5 4 14 16"/></svg></span><p>Venha <b>sem maquiagem nos olhos</b>.</p></article>
+    <article class="guide-card"><span class="guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7.5c0-1.4 1.1-2.5 2.5-2.5h11C18.9 5 20 6.1 20 7.5v9c0 1.4-1.1 2.5-2.5 2.5h-11C5.1 19 4 17.9 4 16.5Z"/><circle cx="12" cy="12" r="4"/><path d="M7 5 5 3m12 2 2-2"/></svg></span><p>Se usa lentes de contato, <b>traga o estojo</b> para retirá-las durante o atendimento.</p></article>
+    <article class="guide-card"><span class="guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 9A7 7 0 0 1 18 6l2 6M4 12l2 6a7 7 0 0 0 12.5-3"/></svg></span><p><b>Manutenção:</b> em até 20 dias e com pelo menos 50% dos fios. Caso contrário, será cobrado o valor de uma nova colocação.</p></article>
+    <article class="guide-card"><span class="guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18m-12 4 6 6m0-6-6 6"/></svg></span><p>Desmarcar ou remarcar seu horário com menos de <b>24 horas</b> de antecedência: o valor do sinal não será ressarcido.</p></article>
+    <article class="guide-card"><span class="guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><p><b>Rua Jacob Holzmann, 167 — Olarias.</b> Ao lado do Hotel Bourbon, próximo ao Mufatto de Olarias.</p></article>
+    <p class="guide-close">Aguardo você 💞</p>
+  </div>
+</section>
+
+</main>
+
+<div class="cart" id="cart" role="status" aria-live="polite" aria-label="Carrinho">
+  <div class="cart-row">
+    <span class="ck" aria-hidden="true">✓</span>
+    <span class="cart-txt"><b>Adicionado ao carrinho</b><small id="cart-n"></small></span>
+    <button class="more" id="cart-more" type="button" aria-haspopup="dialog" aria-controls="order-sheet">Ver detalhes</button>
+  </div>
+</div>
+
+<div class="order-sheet" id="order-sheet" aria-hidden="true">
+  <section class="order-sheet-card" role="dialog" aria-modal="true" aria-labelledby="order-title">
+    <div class="order-handle" aria-hidden="true"></div>
+    <header class="order-head"><h2 id="order-title">Seu carrinho</h2><button class="order-close" id="order-close" type="button" aria-label="Fechar carrinho">×</button></header>
+    <section class="order-box" aria-labelledby="order-summary-title">
+      <h3 id="order-summary-title">Resumo de valores</h3>
+      <div class="order-items" id="order-items"></div>
+      <div class="removal-question"><div><strong>Possui remoção?</strong><p class="removal-hint" id="removal-hint" hidden>A remoção pode variar de R$&nbsp;15 a R$&nbsp;25, conforme a quantidade de cílios que ainda possui.</p></div><button class="removal-toggle" id="removal-toggle" type="button" aria-pressed="false" aria-label="Possui remoção?" title="Não possui remoção"></button></div>
+      <div class="day-question"><strong>Qual dia da semana você tem preferência?</strong><div class="day-picker" id="day-picker" role="group" aria-label="Escolha o dia da semana"><button class="day-choice" type="button" data-day="seg" aria-label="Segunda-feira" aria-pressed="false">seg</button><button class="day-choice" type="button" data-day="ter" aria-label="Terça-feira" aria-pressed="false">ter</button><button class="day-choice" type="button" data-day="quar" aria-label="Quarta-feira" aria-pressed="false">quar</button><button class="day-choice" type="button" data-day="quin" aria-label="Quinta-feira" aria-pressed="false">quin</button><button class="day-choice" type="button" data-day="sex" aria-label="Sexta-feira" aria-pressed="false">sex</button><button class="day-choice" type="button" data-day="sab" aria-label="Sábado" aria-pressed="false">sab</button></div></div>
+      <div class="day-question"><strong>Qual melhor período?</strong><div class="day-picker period-picker" role="group" aria-label="Escolha o período"><button class="period-choice" type="button" data-period="Manhã" aria-pressed="false">Manhã</button><button class="period-choice" type="button" data-period="Tarde" aria-pressed="false">Tarde</button><button class="period-choice" type="button" data-period="Flexível" aria-pressed="false">Flexível</button></div></div>
+                        <div class="order-time"><span>Tempo estimado</span><strong id="order-time">0 min</strong></div>
+      <div class="order-subtotal"><span>Subtotal</span><strong id="order-subtotal">R$ 0,00</strong></div>
+      <div class="order-total"><span>Total</span><strong id="order-total">R$ 0,00</strong></div>
+    </section>
+    <section class="order-box" aria-labelledby="order-details-title">
+      <h3 id="order-details-title">Detalhes da compra</h3>
+      <label class="order-label" for="order-note">Observações <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
+      <textarea class="order-note" id="order-note" placeholder="Alguma observação sobre seu pedido?"></textarea>
+      <button class="pill cart-go order-cta" id="order-continue" type="button">Enviar para o WhatsApp</button>
+    </section>
+  </section>
+</div>
+
+<script>
+(()=>{
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const PHONE='5542999592780';
+const wa=t=>`https://api.whatsapp.com/send?phone=${PHONE}&text=${encodeURIComponent(t)}`;
+const brl=v=>'R$\u00a0'+Number(v).toFixed(2).replace('.',',');
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const bar=$('.bar'),img=$('.cover-img');
+
+/* barra superior + parallax */
+let busy=false;
+function onScroll(){
+  if(busy)return;busy=true;
+  requestAnimationFrame(()=>{
+    busy=false;
+    const y=scrollY,h=innerHeight;
+    bar.classList.toggle('show',y>h*.7);
+    if(!rm&&y<h*1.2)img.style.setProperty('--py',Math.min(26,y*.06).toFixed(1)+'px');
+  });
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* revelar ao rolar */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+$$('.reveal,.card').forEach(el=>io.observe(el));
+
+/* carrinho */
+const lashes=$$('.card[data-kind=lash]'),brows=$$('.card[data-kind=brow]'),browLead=$('#brow-lead');
+const cart=$('#cart'),cartN=$('#cart-n'),cartMore=$('#cart-more');
+let lashSel=null,browSel=null;
+const orderSheet=$('#order-sheet'),orderItems=$('#order-items'),orderSubtotal=$('#order-subtotal'),orderTotal=$('#order-total'),orderTime=$('#order-time'),orderNote=$('#order-note'),removalToggle=$('#removal-toggle'),removalHint=$('#removal-hint');
+let hasRemoval=false,preferredDay='',preferredPeriod='',previousSelectedCount=0;
+const duration=m=>{const h=Math.floor(m/60),r=m%60;return h?`${h}h${r?` ${r}min`:''}`:`${r} min`};
+function renderTotals(){
+  const sel=[lashSel,browSel].filter(Boolean),total=sel.reduce((n,c)=>n+Number(c.dataset.price||0),0),
+    minutes=sel.reduce((n,c)=>n+Number(c.dataset.minutes||0),0)+(hasRemoval&&lashSel&&!browSel?30:0);
+  removalToggle.setAttribute('aria-pressed',String(hasRemoval));removalToggle.title=hasRemoval?'Possui remoção':'Não possui remoção';removalHint.hidden=!hasRemoval;
+  orderTime.textContent=duration(minutes);orderSubtotal.textContent=brl(total);orderTotal.textContent=brl(total)+(hasRemoval?' + remoção':'');
+}
+function refresh(){
+  [...lashes,...brows].forEach(c=>{const on=c===lashSel||c===browSel,b=$('.pick',c);c.classList.toggle('sel',on);$('span',b).textContent=on?'Adicionado':'Adicionar';b.setAttribute('aria-pressed',on)});
+  browLead.textContent=lashSel?'Quer fazer as sobrancelhas também? Escolha um serviço abaixo.':'Escolha o serviço e adicione ao seu agendamento.';
+  const selected=[lashSel,browSel].filter(Boolean),on=selected.length>0;
+  if(selected.length===1){const item=selected[0];cartN.textContent=`${item.dataset.name} · ${brl(item.dataset.price)}`}
+  else if(selected.length>1){cartN.textContent=`${selected.length} itens · ${selected.map(c=>c.dataset.name).join(' + ')}`}
+  else cartN.textContent='';
+  cart.classList.toggle('show',on);
+  if(!on){hasRemoval=false;preferredDay='';preferredPeriod='';$$('.day-choice').forEach(b=>b.setAttribute('aria-pressed','false'));$$('.period-choice').forEach(b=>b.setAttribute('aria-pressed','false'));if(orderSheet.classList.contains('open'))closeOrderSheet();}
+  orderItems.textContent='';
+  selected.forEach(c=>{
+    const row=document.createElement('div');row.className='order-item';
+    const photo=document.createElement('img');photo.src=$('img',c).src;photo.alt=`Foto de ${c.dataset.name}`;
+    const copy=document.createElement('div');copy.className='order-item-copy';
+    const name=document.createElement('strong');name.textContent=c.dataset.name;
+    const detail=document.createElement('p');detail.textContent=`${brl(c.dataset.price)} · ${duration(Number(c.dataset.minutes||0))}`;
+    const remove=document.createElement('button');remove.className='order-item-delete';remove.type='button';remove.setAttribute('aria-label',`Remover ${c.dataset.name} do carrinho`);remove.title='Remover serviço';remove.innerHTML='<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M5.5 7l1 14h11l1-14M9 7V4h6v3"/></svg>';
+    remove.addEventListener('click',()=>{if(lashSel===c)lashSel=null;if(browSel===c)browSel=null;refresh()});
+    copy.append(name,detail);row.append(photo,copy,remove);orderItems.append(row);
+  });
+  renderTotals();
+  if(selected.length===2&&previousSelectedCount<2&&!orderSheet.classList.contains('open'))openOrderSheet();
+  previousSelectedCount=selected.length;
+}
+const orderSheetCard=$('.order-sheet-card',orderSheet);
+function openOrderSheet(){orderSheetCard.style.transform='';orderSheet.classList.add('open');orderSheet.setAttribute('aria-hidden','false');document.body.classList.add('sheet-open');setTimeout(()=>$('#order-close').focus({preventScroll:true}),50)}
+cartMore.addEventListener('click',openOrderSheet);
+removalToggle.addEventListener('click',()=>{hasRemoval=!hasRemoval;renderTotals()});
+const pickOne=(sel,key,set,get)=>$$(sel).forEach(b=>b.addEventListener('click',()=>{set(get()===b.dataset[key]?'':b.dataset[key]);$$(sel).forEach(x=>x.setAttribute('aria-pressed',String(x.dataset[key]===get())))}));
+pickOne('.day-choice','day',v=>preferredDay=v,()=>preferredDay);
+pickOne('.period-choice','period',v=>preferredPeriod=v,()=>preferredPeriod);
+function closeOrderSheet(){orderSheet.classList.remove('open');orderSheet.setAttribute('aria-hidden','true');document.body.classList.remove('sheet-open');orderSheetCard.style.transform=''}
+let dragStartY=null,dragDistance=0;
+function startSheetDrag(e){if(e.target.closest('button,input,textarea,select,label,a'))return;dragStartY=e.clientY;dragDistance=0;orderSheetCard.classList.add('dragging');orderSheetCard.setPointerCapture?.(e.pointerId)}
+function moveSheetDrag(e){if(dragStartY===null)return;const delta=e.clientY-dragStartY;if(delta<=0)return;if(orderSheetCard.scrollTop>0){dragStartY=null;orderSheetCard.classList.remove('dragging');orderSheetCard.style.transform='';return}dragDistance=delta;orderSheetCard.style.transform=`translateY(${dragDistance}px)`;if(e.cancelable)e.preventDefault()}
+async function minimizeOrderSheet(){
+  const pull=dragDistance;orderSheetCard.classList.add('dragging');orderSheetCard.style.transform='';
+  const from=orderSheetCard.getBoundingClientRect(),to=cart.getBoundingClientRect();
+  const sx=Math.max(.01,to.width/from.width),sy=Math.max(.01,to.height/from.height),dx=to.left-from.left,dy=to.top-from.top;
+  const animation=orderSheetCard.animate([
+    {transform:`translateY(${pull}px)`,opacity:1,borderRadius:getComputedStyle(orderSheetCard).borderRadius},
+    {transform:`translate(${dx}px,${dy}px) scale(${sx},${sy})`,opacity:.35,borderRadius:'20px'}
+  ],{duration:rm?0:430,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});
+  orderSheetCard.classList.remove('dragging');
+  orderSheet.classList.remove('open');orderSheet.setAttribute('aria-hidden','true');
+  try{await animation.finished}catch{}
+  animation.cancel();closeOrderSheet();
+}
+function endSheetDrag(){if(dragStartY===null)return;const dismiss=dragDistance>95;dragStartY=null;orderSheetCard.classList.remove('dragging');if(dismiss)void minimizeOrderSheet();else orderSheetCard.style.transform=''}
+orderSheetCard.addEventListener('pointerdown',startSheetDrag);orderSheetCard.addEventListener('pointermove',moveSheetDrag);orderSheetCard.addEventListener('pointerup',endSheetDrag);orderSheetCard.addEventListener('pointercancel',endSheetDrag);
+$('#order-close').addEventListener('click',closeOrderSheet);
+orderSheet.addEventListener('click',e=>{if(e.target===orderSheet)closeOrderSheet()});
+$('#order-continue').addEventListener('click',()=>{
+  const names=[lashSel,browSel].filter(Boolean).map(c=>c.dataset.name),note=orderNote.value.trim();
+  const message=`Oiii! 💖 Quero agendar:\n${names.join('\n')}${preferredDay?'\nDia preferido: '+preferredDay:''}${preferredPeriod?'\nPeríodo preferido: '+preferredPeriod:''}\nPossui remoção: ${hasRemoval?'Sim':'Não'}${note?'\nObservação: '+note:''} ✨`;
+  window.open(wa(message),'_blank','noopener');
+});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&orderSheet.classList.contains('open'))closeOrderSheet()});
+
+/* cílios ⇄ sobrancelhas */
+const cat=$('#cat'),panels=$('.panels'),pan={lash:$('#p-lash'),brow:$('#p-brow')};
+let cur='lash',lock=false;
+function show(next){
+  if(next===cur||lock)return;lock=true;
+  cat.dataset.mode=next;
+  $$('button',cat).forEach(x=>x.setAttribute('aria-pressed',x.dataset.cat===next));
+  const from=pan[cur],to=pan[next];
+  if(rm){from.hidden=true;to.hidden=false;cur=next;lock=false;return}
+  const h0=panels.offsetHeight;panels.style.height=h0+'px';
+  from.classList.add('fade');
+  setTimeout(()=>{
+    from.hidden=true;from.classList.remove('fade');
+    to.classList.add('fade');to.hidden=false;
+    panels.style.height='auto';const h1=panels.offsetHeight;
+    panels.style.height=h0+'px';void panels.offsetHeight;panels.style.height=h1+'px';
+    requestAnimationFrame(()=>to.classList.remove('fade'));
+    setTimeout(()=>{panels.style.height='';cur=next;lock=false},470);
+  },340);
+}
+$$('button',cat).forEach(b=>b.addEventListener('click',()=>show(b.dataset.cat)));
+function goTop(){
+  const target=Math.max(0,Math.round($('.head').getBoundingClientRect().top+scrollY-84));
+  scrollTo({top:target,behavior:rm?'auto':'smooth'});
+  if(rm)return Promise.resolve();
+  return new Promise(res=>{
+    let last=-1,still=0;const t0=performance.now();
+    (function tick(){
+      const y=scrollY;
+      still=(Math.abs(y-target)<2||y===last)?still+1:0;last=y;
+      if(still>=8||performance.now()-t0>3000)res();else requestAnimationFrame(tick);
+    })();
+  });
+}
+let pending=false;
+lashes.forEach(c=>c.addEventListener('click',async()=>{
+  lashSel=c;refresh();
+  if(pending)return;pending=true;
+  await goTop();                                   /* espera a tela parar de subir */
+  if(!rm)await new Promise(r=>setTimeout(r,200));  /* pequena pausa para a pessoa perceber */
+  show('brow');pending=false;
+}));
+brows.forEach(c=>c.addEventListener('click',async()=>{
+  browSel=browSel===c?null:c;refresh();
+  if(!browSel||lashSel||pending)return;
+  pending=true;
+  await goTop();
+  if(!rm)await new Promise(r=>setTimeout(r,200));
+  show('lash');pending=false;
+}));
+refresh();
+
+/* foto do card: amplia suavemente para um tamanho um pouco maior */
+function zoomPhoto(el){
+  if($('.zoomov'))return;
+  const photos=$$('img',el),r=el.getBoundingClientRect();let index=0;
+  const ov=document.createElement('div');ov.className='zoomov';ov.setAttribute('role','dialog');ov.setAttribute('aria-modal','true');ov.setAttribute('aria-label','Foto ampliada');
+  const f=document.createElement('img');f.className='zoomimg';f.style.objectFit='contain';
+  const put=(x,y,w,h)=>Object.assign(f.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});
+  const fit=()=>{const im=photos[index],iw=im.naturalWidth||Number(im.getAttribute('width'))||im.width,ih=im.naturalHeight||Number(im.getAttribute('height'))||im.height,ratio=iw/ih;let w=Math.min(innerWidth*.9,520),h=w/ratio;if(h>innerHeight*.76){h=innerHeight*.76;w=h*ratio}put((innerWidth-w)/2,(innerHeight-h)/2,w,h)};
+  const setPhoto=()=>{f.src=photos[index].src;f.alt=photos[index].alt;fit()};
+  f.src=photos[0].src;f.alt=photos[0].alt;put(r.left,r.top,r.width,r.height);ov.append(f);document.body.append(ov);
+  void ov.offsetWidth;ov.classList.add('open');fit();
+  let closing=false;
+  const close=()=>{if(closing)return;closing=true;const r2=el.getBoundingClientRect();ov.classList.remove('open');put(r2.left,r2.top,r2.width,r2.height);removeEventListener('keydown',key);removeEventListener('scroll',close);removeEventListener('resize',fit);setTimeout(()=>{ov.remove();el.focus({preventScroll:true})},rm?0:560)};
+  const closeBtn=document.createElement('button');closeBtn.type='button';closeBtn.className='zoom-close';closeBtn.textContent='×';closeBtn.setAttribute('aria-label','Fechar foto');closeBtn.onclick=e=>{e.stopPropagation();close()};ov.append(closeBtn);
+  let count;
+  const next=step=>{index=(index+step+photos.length)%photos.length;setPhoto();if(count)count.textContent=(index+1)+' / '+photos.length};
+  if(photos.length>1){const controls=document.createElement('div');controls.className='gallery-controls';controls.onclick=e=>e.stopPropagation();const prev=document.createElement('button'),forward=document.createElement('button');count=document.createElement('span');count.setAttribute('aria-live','polite');count.textContent='1 / '+photos.length;prev.type=forward.type='button';prev.textContent='‹';forward.textContent='›';prev.setAttribute('aria-label','Foto anterior');forward.setAttribute('aria-label','Próxima foto');prev.onclick=()=>next(-1);forward.onclick=()=>next(1);controls.append(prev,count,forward);ov.append(controls)}
+  const key=e=>{if(e.key==='Escape')close();if(e.key==='ArrowRight')next(1);if(e.key==='ArrowLeft')next(-1);if(e.key==='Tab'){const buttons=$$('button',ov),first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}};
+  ov.addEventListener('click',close);addEventListener('keydown',key);addEventListener('scroll',close,{passive:true,once:true});addEventListener('resize',fit);closeBtn.focus({preventScroll:true});
+}
+/* pré-carrega as fotos restantes em segundo plano (evita ver a imagem "montando" ao trocar de aba) */
+addEventListener('load',()=>{
+  const warm=()=>$$('.card img').forEach(i=>{const p=new Image();p.src=i.currentSrc||i.src;p.decode?.().catch(()=>{})});
+  'requestIdleCallback' in window?requestIdleCallback(warm,{timeout:2500}):setTimeout(warm,1200);
+});
+
+document.addEventListener('click',e=>{const art=e.target.closest?.('.photo-art');if(!art)return;e.stopPropagation();zoomPhoto(art)},true);
+})();
+</script>
+</body>
+</html>
