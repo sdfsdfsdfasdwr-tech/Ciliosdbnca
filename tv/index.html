@@ -3,67 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#000000">
-<link rel="manifest" href="data:application/json,{&quot;name&quot;:&quot;Minha TV&quot;,&quot;short_name&quot;:&quot;MinhaTV&quot;,&quot;start_url&quot;:&quot;.&quot;,&quot;display&quot;:&quot;standalone&quot;,&quot;background_color&quot;:&quot;#000&quot;,&quot;theme_color&quot;:&quot;#000&quot;}">
-<title>Minha TV - Ao Vivo</title>
+<title>MINHA TV</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto}
-body{background:#0a0a0a;color:#fff}
-header{padding:16px;background:#111;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222;position:sticky;top:0;z-index:10}
-header h1{font-size:18px;font-weight:800}
-header span{font-size:11px;background:#ff0033;padding:4px 10px;border-radius:20px;font-weight:700;animation:pulse 1.5s infinite}
-@keyframes pulse{0%{opacity:1}50%{opacity:.6}100%{opacity:1}}
-#playerWrap{width:100%;aspect-ratio:16/9;background:#000;position:sticky;top:61px}
-#playerWrap iframe, #playerWrap video{width:100%;height:100%;border:0}
-#chList{display:flex;gap:10px;overflow-x:auto;padding:14px;background:#111;scrollbar-width:none}
-#chList::-webkit-scrollbar{display:none}
-.ch{min-width:74px;height:74px;background:#1a1a1a;border:2px solid #222;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
+body{background:#000;color:#fff}
+header{padding:12px;background:#111;display:flex;justify-content:space-between;align-items:center}
+#playerWrap{width:100%;aspect-ratio:16/9;background:#000}
+#playerWrap iframe{width:100%;height:100%;border:0}
+#chList{display:flex;gap:10px;overflow-x:auto;padding:12px;background:#111}
+.ch{min-width:80px;height:75px;background:#1f1f1f;border:2px solid #333;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}
 .ch.active{border-color:#ff0033;background:#2a0a0f}
-.ch b{font-size:24px;font-weight:900}
-.ch i{font-style:normal;font-size:10px;margin-top:4px;color:#aaa;font-weight:600}
-#info{padding:18px}
-#info h2{font-size:19px;margin-bottom:6px}
-#info p{font-size:13px;color:#888;line-height:1.5}
-.btn{width:100%;margin-top:18px;background:#fff;color:#000;border:0;padding:14px;border-radius:12px;font-weight:800;font-size:14px;cursor:pointer}
-small{color:#555;font-size:11px;display:block;margin-top:20px;text-align:center}
+#info{padding:16px}
+.btn{width:100%;margin-top:14px;background:#fff;color:#000;border:0;padding:14px;border-radius:12px;font-weight:800}
 </style>
 </head>
 <body>
-<header><h1>📺 MINHA TV</h1><span>● AO VIVO</span></header>
+<header><h1>📺 MINHA TV</h1><span style="background:#ff0033;padding:4px 10px;border-radius:20px;font-size:11px">AO VIVO</span></header>
 <div id="playerWrap">
-<iframe id="player" src="https://www.youtube.com/embed/live_stream?channel=UCU5JicSrEM5A5ehpgpJ5V4A" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+<iframe id="player" src="https://www.youtube-nocookie.com/embed/SWhsS5g8Lqw?autoplay=1&mute=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
 </div>
 <div id="chList">
-<div class="ch active" onclick="play('jovempan',this)"><b>N</b><i>JP NEWS</i></div>
-<div class="ch" onclick="play('recordnews',this)"><b>R</b><i>RECORD</i></div>
-<div class="ch" onclick="play('band',this)"><b>B</b><i>BAND</i></div>
-<div class="ch" onclick="play('cultura',this)"><b>C</b><i>CULTURA</i></div>
-<div class="ch" onclick="play('globo',this)"><b>G</b><i>GLOBO</i></div>
-<div class="ch" onclick="play('sbt',this)"><b>S</b><i>SBT</i></div>
+<div class="ch active" onclick="trocar(this,'SWhsS5g8Lqw','Jovem Pan News - Ao Vivo')"><b>N</b><small>JP NEWS</small></div>
+<div class="ch" onclick="trocar(this,'2O1h0lI1V0E','Record News')"><b>R</b><small>RECORD</small></div>
+<div class="ch" onclick="trocar(this,'8fvMNKyq-4w','Band News')"><b>B</b><small>BAND</small></div>
+<div class="ch" onclick="trocar(this,'6L6h2q0R0g0','TV Cultura')"><b>C</b><small>CULTURA</small></div>
+<div class="ch" onclick="window.open('https://globoplay.globo.com/tv-globo/ao-vivo/','_blank')"><b>G</b><small>GLOBO</small></div>
 </div>
 <div id="info">
-<h2 id="chName">Jovem Pan News - Ao Vivo</h2>
-<p id="chDesc">Notícias 24h. Toque nos canais acima para trocar. Para Globo/SBT você será redirecionado ao app oficial (exige login gratuito).</p>
+<h2 id="titulo">Jovem Pan News - Ao Vivo</h2>
+<p style="color:#888;font-size:13px;margin-top:4px">Se aparecer "não disponível", clique em "Assistir no YouTube" dentro do player - é liberação do YouTube.</p>
 <button class="btn" onclick="document.getElementById('playerWrap').requestFullscreen()">⛶ TELA CHEIA</button>
-<small>App criado por você - 100% gratuito e legal, usando streams oficiais do YouTube</small>
 </div>
 <script>
-const channels = {
- jovempan: {name:'Jovem Pan News - Ao Vivo', desc:'Jornalismo 24h ao vivo.', embed:'https://www.youtube.com/embed/live_stream?channel=UCU5JicSrEM5A5ehpgpJ5V4A'},
- recordnews: {name:'Record News - Ao Vivo', desc:'Record News 24h ao vivo, gratuito.', embed:'https://www.youtube.com/embed/live_stream?channel=UCuiLR4p6rMJS-J8mSBluiYQ'},
- band: {name:'Band Jornalismo', desc:'Band ao vivo pelo YouTube oficial.', embed:'https://www.youtube.com/embed/live_stream?channel=UCfwY1aFyH_s4p2u2iXNiJCQ'},
- cultura: {name:'TV Cultura - Ao Vivo', desc:'Cultura ao vivo 24h.', embed:'https://www.youtube.com/embed/live_stream?channel=UCWw2l_c2q2fQc0iQ0h4Q0h4Q'},
- sbt: {name:'SBT', link:'https://www.youtube.com/@SBT/videos'},
- globo: {name:'Globo', link:'https://globoplay.globo.com/tv-globo/ao-vivo/1783/'}
-};
-function play(id, el){
+function trocar(el, videoId, nome){
  document.querySelectorAll('.ch').forEach(c=>c.classList.remove('active'));
  el.classList.add('active');
- const ch = channels[id];
- document.getElementById('chName').innerText = ch.name;
- document.getElementById('chDesc').innerText = ch.desc || 'Abrindo app oficial...';
- if(ch.link){ window.open(ch.link,'_blank'); return; }
- document.getElementById('playerWrap').innerHTML = `<iframe id="player" src="${ch.embed}&autoplay=1" allowfullscreen allow="autoplay; encrypted-media; fullscreen"></iframe>`;
+ document.getElementById('titulo').innerText = nome;
+ document.getElementById('playerWrap').innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
 }
 </script>
 </body>
