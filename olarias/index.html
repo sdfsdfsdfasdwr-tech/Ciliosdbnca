@@ -360,8 +360,6 @@ html[data-theme=led] .bar{background:rgba(21,12,39,.96)}
 .seg button[data-cat=led]:not([aria-pressed=true]){animation:none}
 .cover-img{will-change:auto}
 }
-html[data-theme=led] .card[data-kind=lash] .pick i{display:none!important}
-html[data-theme=led] .card[data-kind=lash] .pick:disabled{cursor:default;transform:none;background:rgba(199,155,255,.16);color:#d6b7ff;box-shadow:none}
 .studio-space{padding-top:42px;scroll-margin-top:84px}
 .studio-heading{text-align:center;margin-bottom:30px}
 .studio-space h2{font:500 clamp(2rem,9.4vw,2.6rem)/1 var(--serif);letter-spacing:-.01em;color:var(--ink)}
@@ -597,7 +595,6 @@ body.cart-open .ticker div,body.cart-open .seal svg,body.cart-open .fl,body.cart
 .rail .card .pick-wa{display:inline-flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:44px;padding:0 10px;border:1px solid rgba(255,255,255,.4);border-radius:99px;background:linear-gradient(135deg,rgba(37,211,102,.9),rgba(16,170,80,.86));-webkit-backdrop-filter:blur(10px) saturate(1.4);backdrop-filter:blur(10px) saturate(1.4);color:#fff;font:700 .68rem var(--sans);cursor:pointer;box-shadow:0 10px 20px -10px rgba(37,211,102,.8),0 1px 0 rgba(255,255,255,.45) inset;transition:transform .2s ease}
 .pick-wa svg{width:18px;height:18px;flex:none;fill:currentColor}
 .pick-wa:active{transform:scale(.97)}
-html[data-theme=led] .card[data-kind=lash] .pick-wa{display:none}
 .rail .card .bottom{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:stretch}
 .rail .card .bottom .price{grid-column:1/-1}
 .rail .card .pick,.rail .card .pick-wa{flex-direction:column;justify-content:center;gap:5px;width:100%;min-height:62px;padding:8px 4px;border-radius:16px;font-size:.66rem;line-height:1.1}
@@ -642,7 +639,7 @@ html[data-theme=led] .rail .card.sel .pick{background:#8b5cf6;color:#fff;box-sha
 @media(prefers-reduced-motion:reduce){.seo-faq details,.seo-faq summary,.seo-faq summary::after{transition:none}}
 .seo-faq details p{padding:0 16px 16px;color:var(--muted);font-size:.86rem;line-height:1.65}
 
-.led-promo-tag{display:none;align-self:flex-start;max-width:100%;margin:0 0 8px;padding:5px 9px;border:1px solid #dbc2ff66;border-radius:10px;background:#c79bff20;color:#ead9ff;font-size:.65rem;font-weight:700;line-height:1.4}
+.led-promo-tag{display:none;align-self:flex-start;max-width:100%;margin:0 0 8px;padding:5px 9px;border:1px solid #ff8a8a;border-radius:10px;background:#c62828;color:#fff;font-size:.65rem;font-weight:700;line-height:1.4}
 html[data-theme=led] .led-promo-tag{display:inline-flex}
 .led-info .led-promo-tag{display:inline-flex;margin-bottom:14px;font-size:.75rem}
 html[data-theme=led] .rail .card .maint{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 8px;color:#ded3eb}
@@ -813,7 +810,7 @@ html[data-theme=led] .rail .card .maint b{white-space:nowrap;color:#f4ecff}
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const PHONE='5542999592780';
 const wa=t=>`https://api.whatsapp.com/send?phone=${PHONE}&text=${encodeURIComponent(t)}`;
-document.addEventListener('click',e=>{const b=e.target.closest?.('.pick-wa');if(!b)return;e.stopPropagation();e.preventDefault();haptic(10);window.open(wa(`Oiii! 💖 Quero agendar:\n${b.closest('.card').dataset.name} ✨`),'_blank','noopener')},true);
+document.addEventListener('click',e=>{const b=e.target.closest?.('.pick-wa');if(!b)return;e.stopPropagation();e.preventDefault();haptic(10);window.open(wa(`Oiii! 💖 Quero agendar:\n${b.closest('.card').dataset.name}${ledOn&&b.closest('.card').dataset.kind==='lash'?' — LED':''} ✨`),'_blank','noopener')},true);
 const brl=v=>'R$\u00a0'+Number(v).toFixed(2).replace('.',',');
 const rm=false;
 /* aparelho muito fraco (até 2 GB de RAM ou 2 núcleos) → pula transições pesadas */
@@ -910,7 +907,7 @@ document.addEventListener('click',e=>{
   const card=e.target.closest&&e.target.closest('.card[data-kind]');
   if(serviceDialog.open||!card||card.hidden||e.target.closest('.photo-art,.service-info,.pick-wa'))return;
   const kind=card.dataset.kind;let adds=false;
-  if(kind==='lash')adds=!ledOn&&(card!==lashSel||lashSelIsLed!==ledOn);
+  if(kind==='lash')adds=card!==lashSel||lashSelIsLed!==ledOn;
   else if(kind==='brow')adds=card!==browSel;
   else if(kind==='nail')adds=card!==(card.dataset.nailGroup==='feet'?feetSel:nailSel);
   if(!adds)return;
@@ -929,7 +926,7 @@ function updateLashPrices(){
     card.hidden=ledOn&&card.dataset.ledUnavailable==='true';
     if(card.hidden)return;
     const availability=$('.meta b',card);
-    if(availability)availability.textContent=ledOn?'em breve':'disponível';
+    if(availability)availability.textContent='disponível';
     const amount=servicePrice(card,ledOn);
     $('.val',card).innerHTML=`<small>R$</small>${amount}<small>,00</small>`;
     const maint=$('.maint',card);
@@ -962,7 +959,7 @@ function renderCartItems(selected){
   });
 }
 function refresh(){
-  serviceCards.forEach(({card:c,button:b,label})=>{const unavailable=ledOn&&c.dataset.kind==='lash',on=!unavailable&&((c===lashSel&&lashSelIsLed===ledOn)||c===browSel||c===nailSel||c===feetSel),text=unavailable?'Em breve':on?'Adicionado':'Adicionar';c.classList.toggle('sel',on);if(b.disabled!==unavailable)b.disabled=unavailable;if(label.textContent!==text)label.textContent=text;const pressed=String(on);if(b.getAttribute('aria-pressed')!==pressed)b.setAttribute('aria-pressed',pressed)});
+  serviceCards.forEach(({card:c,button:b,label})=>{const unavailable=false,on=(c===lashSel&&lashSelIsLed===ledOn)||c===browSel||c===nailSel||c===feetSel,text=on?'Adicionado':'Adicionar';c.classList.toggle('sel',on);if(b.disabled!==unavailable)b.disabled=unavailable;if(label.textContent!==text)label.textContent=text;const pressed=String(on);if(b.getAttribute('aria-pressed')!==pressed)b.setAttribute('aria-pressed',pressed)});
   browLead.textContent=lashSel?'Quer fazer as sobrancelhas também? Escolha um serviço abaixo.':'';
   const selected=[lashSel,browSel,nailSel,feetSel].filter(Boolean),on=selected.length>0;
   const cartSum=selected.reduce((n,c)=>n+selectedPrice(c),0),cartLabel=selected.map(c=>c.dataset.name).join(' + '),wasShown=cart.classList.contains('show');
@@ -1098,8 +1095,7 @@ function advanceToUnchosen(from){
   },rm?0:220);
 }
 lashes.forEach(c=>c.addEventListener('click',()=>{
-  if(ledOn)return;
-  lashSel=c;lashSelIsLed=false;refresh();advanceToUnchosen('lash');
+  lashSel=c;lashSelIsLed=ledOn;refresh();advanceToUnchosen('lash');
 }));
 brows.forEach(c=>c.addEventListener('click',()=>{
   browSel=browSel===c?null:c;refresh();
